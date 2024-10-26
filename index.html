@@ -3,68 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <!-- Link to our separate CSS file -->
+    <title>Portfolio Template</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero/Intro Section -->
-    <section id="intro" class="hero-section">
-        <h1>Your Name</h1>
-        <h2>Student at University of Chicago</h2>
-        <!-- Optional: Add a profile image -->
-        <!-- <img src="profile-photo.jpg" alt="Your Name" class="profile-image"> -->
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>
-            Write a brief introduction about yourself here. What are you studying? 
-            What are your interests? What makes you unique?
-        </p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <h3>Project Name</h3>
-                <p>Brief project description. What did you build? What technologies did you use?</p>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="header">
+                <h1>Your Name</h1>
+                <h2>What you do -- ex software engineer, data analysis</h2>
+                <p class="tagline">maybe a tagline here</p>
+                
+                <nav class="nav-menu">
+                    <a href="#about" class="nav-item">ABOUT</a>
+                    <a href="#experience" class="nav-item">EXPERIENCE</a>
+                    <a href="#projects" class="nav-item">PROJECTS</a>
+                </nav>
             </div>
 
-            <!-- Project Card 2 -->
-            <div class="project-card">
-                <h3>Project Name</h3>
-                <p>Brief project description. What did you build? What technologies did you use?</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon">GH</a>
+                <a href="#" class="social-icon">IN</a>
+                <a href="#" class="social-icon">TW</a>
             </div>
-        </div>
-    </section>
+        </aside>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <div class="contact-links">
-            <a href="mailto:your.email@pitt.edu">Email</a>
-            <a href="https://github.com/yourusername">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
-        </div>
-    </section>
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="about" class="section">
+                <h3>About Me</h3>
+                <p>
+                    Write a brief introduction about yourself here. Share your journey into programming,
+                    what drives you, and what you're passionate about building.
+                </p>
+                <p>
+                    In your free time, what do you enjoy doing? What are your hobbies and interests
+                    outside of coding?
+                </p>
+            </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Your Name. All rights reserved.</p>
-    </footer>
+            <section id="experience" class="section">
+                <h3>Experience</h3>
+                <div class="experience-item">
+                    <div class="experience-title">Software Engineer</div>
+                    <div class="experience-date">2024 — PRESENT</div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Describe your key responsibilities and achievements</li>
+                            <li>Highlight specific projects or technologies you've worked with</li>
+                            <li>Mention any team collaborations or leadership experiences</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h3>Projects</h3>
+                <div class="experience-item">
+                    <div class="experience-title">Project Name</div>
+                    <div class="experience-description">
+                        A brief description of your project. What problem did it solve?
+                        What technologies did you use?
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

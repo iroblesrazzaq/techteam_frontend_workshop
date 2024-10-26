@@ -1,103 +1,160 @@
-/* Base styles */
-* {
+/* Color Variables */
+:root {
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+}
+
+/* Reset and Base Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--navy);
+    color: var(--slate);
     line-height: 1.6;
-    color: #333;
 }
 
-/* Navigation */
-.navbar {
-    padding: 1rem;
-    background-color: #f8f9fa;
-}
-
-.nav-links {
-    list-style: none;
+/* Layout Container */
+.container {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    min-height: 100vh;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* Hero/Intro Section */
-.hero-section {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-color: #f1f1f1;
-}
-
-.profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 2rem 0;
-}
-
-/* Section Styling */
-section {
-    padding: 4rem 2rem;
-}
-
-h1, h2, h3 {
-    margin-bottom: 1rem;
-}
-
-/* Projects Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-.project-card {
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
-.contact-links {
+/* Sidebar Styles */
+.sidebar {
+    width: 300px;
+    padding: 40px;
+    position: fixed;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.contact-links a {
+/* Main Content Area */
+.main-content {
+    margin-left: 380px;
+    padding: 40px;
+    max-width: 800px;
+}
+
+/* Typography */
+h1 {
+    color: var(--lightest-slate);
+    font-size: 48px;
+    margin: 0;
+    font-weight: 600;
+}
+
+h2 {
+    color: var(--light-slate);
+    font-size: 20px;
+    margin: 10px 0 20px;
+    font-weight: 400;
+}
+
+h3 {
+    color: var(--lightest-slate);
+    margin-bottom: 20px;
+}
+
+.tagline {
+    color: var(--slate);
+    margin: 20px 0;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    margin: 40px 0;
+}
+
+.nav-item {
+    color: var(--light-slate);
     text-decoration: none;
-    color: #333;
-    padding: 0.5rem 1rem;
-    border: 1px solid #333;
-    border-radius: 4px;
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f8f9fa;
+.nav-item:hover {
+    color: var(--white);
 }
 
-/* Hover Effects */
-.nav-links a:hover,
-.contact-links a:hover {
-    color: #007bff;
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+.social-icon {
+    color: var(--light-slate);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Content Sections */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Links */
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--lightest-slate);
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 30px;
+}
+
+.experience-title {
+    color: var(--lightest-slate);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.experience-date {
+    color: var(--slate);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.experience-description {
+    color: var(--slate);
+}
+
+/* Basic Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
 }
